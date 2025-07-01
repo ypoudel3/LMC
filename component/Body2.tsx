@@ -15,7 +15,7 @@ export default function Body2() {
   </div>
 </div>
  <div className="card w-72">
-  <img src="..." className="card-img-top  bg-white" alt="..."/>
+  <img src="book1.jpg" className="card-img-top  bg-white" alt="..."/>
   <div className="card-body  bg-white">
     <h5 className="card-title  bg-white">Card title</h5>
     <p className="card-text  bg-white">Some quick example text to build on the card title and make up the bulk of the card’s content.</p>
