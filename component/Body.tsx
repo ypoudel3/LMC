@@ -3,9 +3,13 @@ export default function Body() {
   return (
     <>   
     
-<div className="px-5 pt-5">
+<div className="px-5 pt-4">
+  <div className="pb-3">
+    <p className="bg-gray-100 rounded-3xl h-10 flex items-center justify-center ">Sign up and &nbsp; <b className="bg-gray-100">GET 10% OFF &nbsp;</b> for your first order. &nbsp; 
+    <a href="" className="bg-gray-100 text-blue-800 underline font-bold"> Sign up now</a></p>
+  </div>
   <div className=" bg-gray-100 rounded-3xl">
-  <div className="navbar flex flex-col md:flex-row items-center justify-between px-11 md:px-12 bg-gray-100 rounded-2xl">
+  <div className="navbar flex flex-col md:flex-row items-center justify-between pt-3 px-11 md:px-12 bg-gray-100 rounded-2xl">
         <span className=" bg-gray-100" >BookLoop</span>
         <ul className="nav-item">
             <li className=" bg-gray-100">Home</li>
@@ -24,7 +28,7 @@ export default function Body() {
         
 
     </div>
-<div className="grid grid-cols-1 md:grid-cols-2 gap-4  px-11 pb-11 bg-gray-100 rounded-3xl" >
+<div className="grid grid-cols-1 md:grid-cols-2 gap-4 pt-14 px-11 pb-14 bg-gray-100 rounded-3xl" >
     <div className="container1 p-3 bg-gray-100">
     
     <div className="text bg-gray-100">
@@ -32,7 +36,7 @@ export default function Body() {
 <p className="mt-11 bg-gray-100">This allows the element to grow and fill available space inside its flex container. This allows the element to grow and fill available space inside its flex container.</p>
     </div>
 
-<div className=" mt-11 flex items-center bg-gray-100">
+<div className=" pt-14 flex items-center bg-gray-100">
   <div className="flex items-center bg-white rounded-full shadow-lg px-4 py-2 w-96">
     <input
       type="text"
@@ -62,45 +66,7 @@ export default function Body() {
 </div>
 </div>
 
-<div className="bg-gray-100 text-center">
-  <p className="bg-gray-100 text-2xl font-bold p-4"> Recommended Books </p>
-  <div className="flex flex-col md:flex-row p-5 justify-between gap-3 items-center bg-gray-100">
-  <div className="card w-72">
-  <img src="..." className="card-img-top  bg-white" alt="..."/>
-  <div className="card-body  bg-white">
-    <h5 className="card-title  bg-white">Card title</h5>
-    <p className="card-text  bg-white">Some quick example text to build on the card title and make up the bulk of the card’s content.</p>
-    <a href="#" className="btn btn-primary">Go somewhere</a>
-  </div>
-</div>
- <div className="card w-72">
-  <img src="..." className="card-img-top  bg-white" alt="..."/>
-  <div className="card-body  bg-white">
-    <h5 className="card-title  bg-white">Card title</h5>
-    <p className="card-text  bg-white">Some quick example text to build on the card title and make up the bulk of the card’s content.</p>
-    <a href="#" className="btn btn-primary">Go somewhere</a>
-  </div>
-</div>
-<div className="card w-72">
-  <img src="..." className="card-img-top  bg-white" alt="..."/>
-  <div className="card-body  bg-white">
-    <h5 className="card-title  bg-white">Card title</h5>
-    <p className="card-text  bg-white">Some quick example text to build on the card title and make up the bulk of the card’s content.</p>
-    <a href="#" className="btn btn-primary">Go somewhere</a>
-  </div>
-</div>
-<div className="card w-72">
-  <img src="..." className="card-img-top  bg-white" alt="..."/>
-  <div className="card-body  bg-white">
-    <h5 className="card-title  bg-white">Card title</h5>
-    <p className="card-text  bg-white">Some quick example text to build on the card title and make up the bulk of the card’s content.</p>
-    <a href="#" className="btn btn-primary">Go somewhere</a>
-  </div>
-</div>
-</div>
 
-  
-    </div>
     </div>
     </div>
 
