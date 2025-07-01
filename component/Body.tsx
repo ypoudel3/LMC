@@ -64,12 +64,45 @@ export default function Body() {
 
 <div className="bg-gray-100 text-center">
   Recommended Books
+  <div className="flex flex-col md:flex-row gap-4">
+  <div className="card w-72">
+  <img src="..." className="card-img-top  bg-white" alt="..."/>
+  <div className="card-body  bg-white">
+    <h5 className="card-title  bg-white">Card title</h5>
+    <p className="card-text  bg-white">Some quick example text to build on the card title and make up the bulk of the card’s content.</p>
+    <a href="#" className="btn btn-primary">Go somewhere</a>
+  </div>
 </div>
- </div> 
+ <div className="card w-72">
+  <img src="..." className="card-img-top  bg-white" alt="..."/>
+  <div className="card-body  bg-white">
+    <h5 className="card-title  bg-white">Card title</h5>
+    <p className="card-text  bg-white">Some quick example text to build on the card title and make up the bulk of the card’s content.</p>
+    <a href="#" className="btn btn-primary">Go somewhere</a>
+  </div>
+</div>
+<div className="card w-72">
+  <img src="..." className="card-img-top  bg-white" alt="..."/>
+  <div className="card-body  bg-white">
+    <h5 className="card-title  bg-white">Card title</h5>
+    <p className="card-text  bg-white">Some quick example text to build on the card title and make up the bulk of the card’s content.</p>
+    <a href="#" className="btn btn-primary">Go somewhere</a>
+  </div>
+</div>
+<div className="card w-72">
+  <img src="..." className="card-img-top  bg-white" alt="..."/>
+  <div className="card-body  bg-white">
+    <h5 className="card-title  bg-white">Card title</h5>
+    <p className="card-text  bg-white">Some quick example text to build on the card title and make up the bulk of the card’s content.</p>
+    <a href="#" className="btn btn-primary">Go somewhere</a>
+  </div>
+</div>
 </div>
 
   
-
+    </div>
+    </div>
+    </div>
 
 
     </>
