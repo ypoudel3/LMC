@@ -63,8 +63,8 @@ export default function Body() {
 </div>
 
 <div className="bg-gray-100 text-center">
-  Recommended Books
-  <div className="flex flex-col md:flex-row gap-4">
+  <p className="bg-gray-100 text-2xl font-bold p-4"> Recommended Books </p>
+  <div className="flex flex-col md:flex-row p-5 justify-between gap-3 items-center bg-gray-100">
   <div className="card w-72">
   <img src="..." className="card-img-top  bg-white" alt="..."/>
   <div className="card-body  bg-white">
