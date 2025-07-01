@@ -53,7 +53,7 @@ export default function Body() {
   <img src="img1.jpg"
        className="w-32 h-48 object-cover transform -rotate-6 scale-90 opacity-80 transition duration-300 hover:scale-95 hover:rotate-0" />
 
-  <img src="img2.jpg"
+  <img src="book2.jpg"
        className="w-36 h-52 object-cover transform -rotate-3 scale-95 opacity-90 transition duration-300 hover:scale-100 hover:rotate-0" />
 
   <img src="img3.jpg"
