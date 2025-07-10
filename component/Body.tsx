@@ -1,5 +1,8 @@
+import React, { useState } from "react";
 
 export default function Body() {
+ const [isOpen, setIsOpen] = useState(false);
+ const [showSignUp, setShowSignUp] = useState(false);
   return (
     <>   
     
@@ -22,7 +25,77 @@ export default function Body() {
     <div className="icons">
               <ul>
                <li className="bg-gray-100"><i className="fa-solid fa-cart-shopping bg-gray-100"></i></li>
-               <li className="bg-gray-100"><i className="fa-regular fa-user bg-gray-100"></i></li>
+               <li className="bg-gray-100"><i className="fa-regular fa-user bg-gray-100" onClick={() => setIsOpen(true)}></i></li>
+            
+        {isOpen && (
+  <div className=" fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50">
+    <div className="bg-white p-6 rounded-xl shadow-xl max-w-md w-full relative">
+      {showSignUp ? (
+        // Sign Up Form
+        <div className=" bg-white flex flex-col items-center">
+          <i
+            className=" bg-white flex fa-solid fa-arrow-left text-2xl mb-4 cursor-pointer self-start"
+            onClick={() => setShowSignUp(false)}
+          ></i>
+          <h1 className="bg-white text-2xl mb-4">Sign up for BookLoop</h1>
+
+          <div className=" bg-white flex flex-col items-start mb-2 w-full">
+            <p className="bg-white mb-1">Email address</p>
+            <input type="text" className="bg-white border-2 rounded w-full h-12 px-3" />
+          </div>
+
+          <div className="bg-white flex flex-col items-start mb-2 w-full">
+            <p className="bg-white mb-1">Password</p>
+            <input type="password" className="bg-white border-2 rounded w-full h-12 px-3" />
+          </div>
+
+          <div className="bg-white flex flex-col items-start mb-2 w-full">
+            <p className="bg-white mb-1">Confirm Password</p>
+            <input type="password" className="bg-white border-2 rounded w-full h-12 px-3" />
+          </div>
+
+          <button className="bg-white border-2 rounded w-full h-12 mt-2 border-blue-800 text-blue-800">
+            Sign up
+          </button>
+        </div>
+      ) : (
+        // Login Form
+        <form action="" className="bg-white flex flex-col items-center">
+          <i
+            className="bg-white flex fa-solid fa-arrow-left text-2xl mb-4 cursor-pointer self-start"
+            onClick={() => setIsOpen(false)}
+          ></i>
+          <h1 className="bg-white text-2xl mb-4">Log in to BookLoop</h1>
+
+          <div className="bg-white flex flex-col items-start mb-2 w-full">
+            <p className="bg-white mb-1">Email address</p>
+            <input type="text" className="bg-white border-2 rounded w-full h-12 px-3" />
+          </div>
+
+          <div className="bg-white flex flex-col items-start mb-2 w-full">
+            <p className="bg-white mb-1">Password</p>
+            <input type="password" className="bg-white border-2 rounded w-full h-12 px-3" />
+          </div>
+
+          <button className="bg-white border-2 rounded w-full h-12 mt-2 border-blue-800 text-blue-800">
+            Log in
+          </button>
+
+          <div className="flex bg-white mt-2">
+            <div className="bg-white">Don't have an account?{' '}</div>
+            <div
+              className="bg-white text-blue-800 cursor-pointer ml-2 font-bold"
+              onClick={() => setShowSignUp(true)}
+            >
+              Sign up
+            </div>
+          </div>
+        </form>
+      )}
+    </div>
+  </div>
+)}  
+              
               </ul>
             </div>
         
