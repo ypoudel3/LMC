@@ -1,5 +1,5 @@
 *{
-background-color: rgb(212, 231, 244);
+
     padding: 0px;
     margin: 0px;
     box-sizing: border-box;
@@ -7,71 +7,4 @@ background-color: rgb(212, 231, 244);
     font-family:Arial, Helvetica, sans-serif;
 
 
-}
-h1{
-    font-size: 4rem;
-}
-.logo img{
-    height: 35px;
-    width: 40px;
-    border-radius: 100%;
-}
-.navbar span{
-    font-size: 18px;
-    font-weight: bold;
-}
-
-
-
-
-.promo i{
-    padding: 0px 4px;
-   
-
-}
-
-ul {
-
-    list-style: none;
-    display: flex;
-    
-}
-
-ul li{
-padding: 0px 10px;
-justify-content: center;
-
-}
-
-
-.logo{
-    display: flex;
-    gap:5px;
-    align-items: center;
-}
-.icons{
-   
-    display: flex;
-
-}
-
-
-.option{
-    padding-top: 1.5rem;
-    align-items: center;
-
-}
-.option a{
-padding-left: 30px;
-color:black;
-
-}
-
-.btn{
-    background-color: rgb(1, 71, 1);
-    font-family:Arial, Helvetica, sans-serif;
-    border-radius: 25px;
-    width:120px;
-    height: 40px;
-   
 }

@@ -1,90 +1,110 @@
-import React, { useState } from "react";
-
-export default function Body() {
- const [isOpen, setIsOpen] = useState(false);
+import {useState} from "react";
+type BodyProps = {
+  scrollToBody2: () => void;
+};
+export default function Body({ scrollToBody2 }: BodyProps) {
+const [isOpen, setIsOpen] = useState(false);
  const [showSignUp, setShowSignUp] = useState(false);
-  return (
-    <>   
-    
-<div className="px-5 pt-4">
-  <div className="pb-3">
-    <p className="bg-gray-100 rounded-3xl h-10 flex items-center justify-center ">Sign up and &nbsp; <b className="bg-gray-100">GET 10% OFF &nbsp;</b> for your first order. &nbsp; 
-    <a href="" className="bg-gray-100 text-blue-800 underline font-bold"> Sign up now</a></p>
-  </div>
-  <div className=" bg-gray-100 rounded-3xl">
-  <div className="navbar flex flex-col md:flex-row items-center justify-between pt-3 px-11 md:px-12 bg-gray-100 rounded-2xl">
-        <span className=" bg-gray-100" >BookLoop</span>
-        <ul className="nav-item">
-            <li className=" bg-gray-100">Home</li>
-            <li className=" bg-gray-100">Textbooks</li>
-            <li className=" bg-gray-100">Notebooks</li>
-            <li className=" bg-gray-100">Membership</li>
-            
-            </ul>
+ 
+ return (
+    <>
+    <div className='relative'>
+      <div className="absolute w-full">
+        <div className="fixed top-0 z-50 w-full flex flex-row justify-between pt-3 px-7 md:px-12 rounded-2xl ">
+        <div className= "text-white flex flex-row items-center gap-2" >
+         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" className="size-6">
+  <path stroke-linecap="round" stroke-linejoin="round" d="M12 21a9.004 9.004 0 0 0 8.716-6.747M12 21a9.004 9.004 0 0 1-8.716-6.747M12 21c2.485 0 4.5-4.03 4.5-9S14.485 3 12 3m0 18c-2.485 0-4.5-4.03-4.5-9S9.515 3 12 3m0 0a8.997 8.997 0 0 1 7.843 4.582M12 3a8.997 8.997 0 0 0-7.843 4.582m15.686 0A11.953 11.953 0 0 1 12 10.5c-2.998 0-5.74-1.1-7.843-2.918m15.686 0A8.959 8.959 0 0 1 21 12c0 .778-.099 1.533-.284 2.253m0 0A17.919 17.919 0 0 1 12 16.5c-3.162 0-6.133-.815-8.716-2.247m0 0A9.015 9.015 0 0 1 3 12c0-1.605.42-3.113 1.157-4.418" />
+</svg>
+  <div>L-MCM</div></div>
+      <div className=" flex justify-center">
+        <ul className="flex gap-6 text-white">
+            <li className="text-white">Home</li>
+            <li className="text-white">How It Works</li>
+            <li className="text-white">Legal Help</li>
+            <li className="text-white">About Us</li>
         
-    <div className="icons">
-              <ul>
-               <li className="bg-gray-100"><i className="fa-solid fa-cart-shopping bg-gray-100"></i></li>
-               <li className="bg-gray-100"><i className="fa-regular fa-user bg-gray-100" onClick={() => setIsOpen(true)}></i></li>
-            
+            </ul>  
+    
+ </div>
+    <div className=" text-white "><i className="fa-regular fa-user" onClick={() => setIsOpen(true)}></i></div>
+       
         {isOpen && (
   <div className=" fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50">
-    <div className="bg-white p-6 rounded-xl shadow-xl max-w-md w-full relative">
+    <div className="bg-gray-300/20 backdrop-blur-md border-1 border-white p-6 rounded-xl shadow-xl max-w-md w-full relative">
       {showSignUp ? (
         // Sign Up Form
-        <div className=" bg-white flex flex-col items-center">
+        <div className= "flex flex-col items-center">
           <i
-            className=" bg-white flex fa-solid fa-arrow-left text-2xl mb-4 cursor-pointer self-start"
+            className=" flex fa-solid fa-arrow-left text-2xl mb-4 cursor-pointer self-start text-white"
             onClick={() => setShowSignUp(false)}
           ></i>
-          <h1 className="bg-white text-2xl mb-4">Sign up for BookLoop</h1>
+          <h1 className="bg-transparent text-2xl mb-4 text-white font-bold">
+            Sign up </h1>
+            <div className="relative w-full">
+             <input type="text" className="bg-transparent border-b-2 text-white w-full h-12" placeholder="Name" /> 
+             <i className="fa-regular fa-user text-white absolute right-3 top-1/2 transform -translate-y-1/2"></i> </div>
+            <div className="relative w-full mt-3">
+             <input type="text" className="bg-transparent border-b-2 text-white w-full h-12" placeholder="Email" /> 
+             <i className="fa-regular fa-envelope text-white absolute right-3 top-1/2 transform -translate-y-1/2"></i> </div>
+           
+            <div className="relative w-full mt-3">
+            <input type="password" className="bg-transparent border-b-2  text-white w-full h-12 " placeholder="Password" />
+             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" className="w-5 h-5 text-white  absolute right-3 top-1/2 transform -translate-y-1/2">
+  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M16.5 10.5V7a4.5 4.5 0 00-9 0v3.5M4.5 10.5h15v9a2.25 2.25 0 01-2.25 2.25h-10.5A2.25 2.25 0 014.5 19.5v-9z" />
+</svg>
 
-          <div className=" bg-white flex flex-col items-start mb-2 w-full">
-            <p className="bg-white mb-1">Email address</p>
-            <input type="text" className="bg-white border-2 rounded w-full h-12 px-3" />
-          </div>
+</div>
+            <div className="relative w-full mt-3">
+            <input type="password" className="bg-transparent border-b-2  text-white w-full h-12 " placeholder="Confirm Password" />
+             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" className="w-5 h-5 text-white  absolute right-3.5 top-1/2 transform -translate-y-1/2">
+  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M16.5 10.5V7a4.5 4.5 0 00-9 0v3.5M4.5 10.5h15v9a2.25 2.25 0 01-2.25 2.25h-10.5A2.25 2.25 0 014.5 19.5v-9z" />
+</svg>
 
-          <div className="bg-white flex flex-col items-start mb-2 w-full">
-            <p className="bg-white mb-1">Password</p>
-            <input type="password" className="bg-white border-2 rounded w-full h-12 px-3" />
-          </div>
+</div>
+   <div className="flex text-white mt-8 gap-2">
+    <input type="checkbox" className="w-4 cursor-pointer" /> <span className="text-gray-400">I agree to the</span> <a href="" className="">terms & conditions</a>
+   </div>
+        
 
-          <div className="bg-white flex flex-col items-start mb-2 w-full">
-            <p className="bg-white mb-1">Confirm Password</p>
-            <input type="password" className="bg-white border-2 rounded w-full h-12 px-3" />
-          </div>
-
-          <button className="bg-white border-2 rounded w-full h-12 mt-2 border-blue-800 text-blue-800">
+  <button className="rounded-full w-28 h-10 mt-8 bg-white">
             Sign up
-          </button>
+  </button>
         </div>
       ) : (
         // Login Form
-        <form action="" className="bg-white flex flex-col items-center">
+        <form action="" className="flex flex-col items-center">
           <i
-            className="bg-white flex fa-solid fa-arrow-left text-2xl mb-4 cursor-pointer self-start"
+            className="text-white bg-transparent flex fa-solid fa-arrow-left text-2xl mb-4 cursor-pointer self-start"
             onClick={() => setIsOpen(false)}
           ></i>
-          <h1 className="bg-white text-2xl mb-4">Log in to BookLoop</h1>
+          <h1 className="bg-transparent text-2xl mb-4 font-bold text-white">Log in </h1>
 
-          <div className="bg-white flex flex-col items-start mb-2 w-full">
-            <p className="bg-white mb-1">Email address</p>
-            <input type="text" className="bg-white border-2 rounded w-full h-12 px-3" />
-          </div>
+          <div className="relative w-full mt-3">
+             <input type="text" className="bg-transparent border-b-2 text-white w-full h-12" placeholder="Email" /> 
+             <i className="fa-regular fa-envelope text-white absolute right-3 top-1/2 transform -translate-y-1/2"></i> </div>
 
-          <div className="bg-white flex flex-col items-start mb-2 w-full">
-            <p className="bg-white mb-1">Password</p>
-            <input type="password" className="bg-white border-2 rounded w-full h-12 px-3" />
-          </div>
+         <div className="relative w-full mt-3">
+            <input type="password" className="bg-transparent border-b-2  text-white w-full h-12 " placeholder="Password" />
+             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" className="w-5 h-5 text-white  absolute right-3 top-1/2 transform -translate-y-1/2">
+  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M16.5 10.5V7a4.5 4.5 0 00-9 0v3.5M4.5 10.5h15v9a2.25 2.25 0 01-2.25 2.25h-10.5A2.25 2.25 0 014.5 19.5v-9z" />
+</svg>
 
-          <button className="bg-white border-2 rounded w-full h-12 mt-2 border-blue-800 text-blue-800">
+</div>
+<div className="flex flex-row mt-4 justify-between w-full">
+  <div className="flex gap-1 text-gray-400">
+  <input type="checkbox" className="" /> Remember me
+</div>
+<div className="text-white">Forgot password</div>
+</div>
+
+ <button className="rounded-full w-28 h-10 mt-4 bg-white">
             Log in
-          </button>
+  </button>
 
-          <div className="flex bg-white mt-2">
-            <div className="bg-white">Don't have an account?{' '}</div>
+          <div className="flex bg-transparent mt-4">
+            <div className="bg-transparent text-gray-400">Don't have an account?{' '}</div>
             <div
-              className="bg-white text-blue-800 cursor-pointer ml-2 font-bold"
+              className="bg-transparent text-white cursor-pointer ml-2 font-bold"
               onClick={() => setShowSignUp(true)}
             >
               Sign up
@@ -95,55 +115,41 @@ export default function Body() {
     </div>
   </div>
 )}  
-              
-              </ul>
-            </div>
-        
 
-    </div>
-<div className="grid grid-cols-1 md:grid-cols-2 gap-4 pt-14 px-11 pb-14 bg-gray-100 rounded-3xl" >
-    <div className="container1 p-3 bg-gray-100">
+
+</div>
     
-    <div className="text bg-gray-100">
-      <p className="text-6xl font-sans font-medium mt-4 bg-gray-100">For All Your <br />Reading Needs </p>
-<p className="mt-11 bg-gray-100">This allows the element to grow and fill available space inside its flex container. This allows the element to grow and fill available space inside its flex container.</p>
-    </div>
+</div>
+<div className="relative w-full h-screen">
+ 
+  <img
+    src="b1.jpg"
+    alt="Background"
+    className="w-full h-full object-cover brightness-50"
+  />
 
-<div className=" pt-14 flex items-center bg-gray-100">
-  <div className="flex items-center bg-white rounded-full shadow-lg px-4 py-2 w-96">
-    <input
-      type="text"
-      placeholder="Search Books..."
-      className="flex-grow text-gray-600 placeholder-gray-400 bg-transparent focus:outline-none"
-    />
-    <i className="fas fa-search text-gray-500 text-lg cursor-pointer bg-inherit"></i>
+ 
+  <div className="absolute inset-0 flex flex-col items-start justify-center text-left text-white px-4 pt-16">
+      <div className="px-7 md:px-20 ">
+        <div className="text-4xl md:text-5xl font-bold  ">Support & Safety for</div> 
+      <div className="text-4xl md:text-5xl font-bold mt-2">Nepali Migrant Workers</div> 
+      <div className="text-4xl md:text-5xl font-bold mt-2 ">Around the World</div>
+      
+      <p className="text-lg md:text-xl max-w-2xl mt-3 text-gray-100">
+Emergency support, legal assistance, and financial tools all in <br />one easy to use platform. </p>
+<button className="mt-14 rounded-full mx-1 px-3 h-10 bg-white hover:scale-105 text-gray-700" onClick={scrollToBody2}>Discover More</button>
+   
+     </div>
+      
+   
+    
   </div>
 </div>
+
+
+ </div>
  
-</div>
-
-<div className="flex justify-center items-center space-x-[-6] bg-gray-100 pr-4 ">
-  <img src="img1.jpg"
-       className="w-32 h-48 object-cover transform -rotate-6 scale-90 opacity-80 transition duration-300 hover:scale-95 hover:rotate-0" />
-
-  <img src="book2.jpg"
-       className="w-36 h-52 object-cover transform -rotate-3 scale-95 opacity-90 transition duration-300 hover:scale-100 hover:rotate-0" />
-
-  <img src="img3.jpg"
-       className="w-44 h-64 object-cover z-10 shadow-xl transform scale-105 transition duration-300" />
-
-  <img src="img4.jpg"
-       className="w-36 h-52 object-cover transform rotate-3 scale-95 opacity-90 transition duration-300 hover:scale-100 hover:rotate-0" />
-  <img src="img5.jpg"
-       className="w-32 h-48 object-cover transform rotate-6 scale-90 opacity-80 transition duration-300 hover:scale-95 hover:rotate-0" />
-</div>
-</div>
-
-
-    </div>
-    </div>
-
-
-    </>
+    
+</>
   )
 }
