@@ -11,6 +11,8 @@ export default function Body2() {
         <div className=" rounded-full p-2 bg-gray-100 text-xl ">🔴</div>
         <div className="font-bold">Send SOS</div>
         <div className="text-center">Trigger instant emergency alerts with your one tap </div>
+        
+
        </div>
         {/* second card*/}
        <div className="flex flex-col items-center">
