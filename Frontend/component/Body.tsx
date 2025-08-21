@@ -19,9 +19,9 @@ const [isOpen, setIsOpen] = useState(false);
       <div className=" flex justify-center">
         <ul className="flex gap-6 text-white">
             <li className="text-white">Home</li>
-            <li className="text-white">How It Works</li>
             <li className="text-white">Legal Help</li>
-            <li className="text-white">About Us</li>
+            <li className="text-white">Track Expenses</li>
+            <li className="text-white">Report Abuse</li>
         
             </ul>  
     

@@ -1,10 +1,10 @@
 import axios from "axios";
 import  { useRef , useState } from 'react';
 export default function SOS() {
+const [status, setStatus] = useState(""); 
 
 
 const sendSOS = async () => {
-    const [status, setStatus] = useState(""); 
   try {
     // Example SOS data
     const sosData = {
